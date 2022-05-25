@@ -1,0 +1,7 @@
+.app__navbar { /*this modifies the navbar named in .jsx*/
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
