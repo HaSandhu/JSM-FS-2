@@ -1,80 +1,72 @@
 import React from 'react';
-import {motion} from 'framer-motion';
-import {images} from '../../constants';
+import { motion } from 'framer-motion';
 
+import { images } from '../../constants';
 import './Header.scss';
 
-const scaleVariants = { 
-// This is for scaling header pfp
+const scaleVariants = { //Use this to mess phase in and out background circle
   whileInView: {
-    scale: [0,1],
-    opacity: [0,1],
+    scale: [0, 1],
+    opacity: [0, 1],
     transition: {
-      duration: 'easeInOut'
-    }
-  } 
-}
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+};
 
-const Header = () => {
-  return (
-    <div id='home' className="app__header app__flex"> {/*This is our header*/}
-    {/*While in view, fully invisible to fully visible*/}
-      <motion.div 
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }} 
-        transition={{duration: 0.5}}
-        className="app__header-info"
-        >
-          <div className="app__header-badge">
-            <div className="badge-cmp app__flex">
-              <span>👋</span>
-              <div style={{marginLeft: 20}}>
-                <p className="p-text">
-                  Hello, I am
-                </p>
-                <hi className="head-text">
-                  Harman
-                </hi>
-              </div>
-            </div>
+const Header = () => (
+  //This is the overall header
+  //first motion is for the text bubbles
 
-            <div className="tag-cmp app__flex">
-              <p className="p-text">
-                UT CS Student
-              </p>
-            </div>
+  <div className="app__header app__flex"> 
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      className="app__header-info"
+    >
+      <div className="app__header-badge">
+        <div className="badge-cmp app__flex">
+          <span>👋</span>
+          <div style={{ marginLeft: 10 }}> 
+            <p className="p-text">Hello, I am</p>
+            <h1 className="head-text">Harman</h1>
           </div>
-      </motion.div>
-        
-        
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }} //This sets up motion for my pfp
-        className="app__header-img"
-      >
-        <img src={images.another} alt="Harman Portrait"/> 
-        <motion.img //motion for circle
-        whileInView={{ scale: [0, 1] }} 
+        </div>
+
+        <div className="tag-cmp app__flex">
+          <p className="p-text">UTCS Student</p>
+        </div>
+      </div>
+    </motion.div>
+
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.5, delayChildren: 0.5 }}
+      className="app__header-img"
+    >
+      <img className="app__header-profile" src={images.final} alt="profile_bg" />
+      <motion.img
+        whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
-        src={images.circle}
+        src={images.circle }
         alt="profile_circle"
         className="overlay_circle"
       />
-      {/*//for pfp animation*/}
-      </motion.div> 
-        
-      <motion.div
-      variant={scaleVariants}
+    </motion.div>
+
+    <motion.div
+      variants={scaleVariants}
       whileInView={scaleVariants.whileInView}
-      className="app__header-"
-      >
-       {[images.flutter, images.redux, images.sass].map((circle, index) => (
+      className="app__header-circles"
+    >
+      {[images.react, images.cpp, images.sass].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
-      ))} 
-      </motion.div>
-    </div>
-  )
-}
+      ))}
+    </motion.div>
+  </div>
+);
 
 export default Header

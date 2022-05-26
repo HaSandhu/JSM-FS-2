@@ -1,4 +1,4 @@
-import email from '../assets/email.png'; //add new images here first
+import email from '../assets/email.png'; //add new images here
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
 import cpp from '../assets/cpp.png';
@@ -23,6 +23,10 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
+import harman from '../assets/download.png';
+import another from '../assets/Another.jpg';
+import final from '../assets/final.png';
+import anotherfinal from '../assets/anotherfinal.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
@@ -37,6 +41,11 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
 export default {
+  anotherfinal,
+  final,
+  another,
+  harman, 
+  test,
   email,
   mobile,
   api,
@@ -63,7 +72,6 @@ export default {
   profile,
   circle,
   logo,
-  test,
   adidas,
   amazon,
   asus,
