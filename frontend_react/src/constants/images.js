@@ -22,6 +22,9 @@ import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
+import aboutHarman from '../assets/aboutHarman.jpg';
+import aboutTrading from '../assets/aboutTrading.jpg';
+import aboutCar from '../assets/aboutCar.jpg';
 
 import harman from '../assets/download.png';
 import another from '../assets/Another.jpg';
@@ -41,6 +44,9 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
 export default {
+  aboutCar,
+  aboutTrading,
+  aboutHarman,
   anotherfinal,
   final,
   another,
