@@ -1,0 +1,126 @@
+.head-text {
+  margin-top: 10rem;
+}
+
+.app__courseworks {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .app__courseworks-container {
+    width: 80%;
+    margin-top: 3rem;
+  
+    display: flex;
+    flex-direction: row;
+  
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  
+  .app__courseworks-exp {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+  
+    @media screen and (max-width: 900px) {
+      margin-top: 2rem;
+    }
+  }
+  
+  .app__courseworks-exp-item { //This is semester
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex;
+    align-items: flex; //center or flex?
+    margin: 1rem ;
+  }
+  
+  .app__courseworks-exp-works {
+    flex: 1;
+  
+    .app__courseworks-exp-work {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      @media screen and (max-width: 900px) {
+        margin-bottom: .5rem;
+      }
+  
+      h4 {
+        font-weight: 500;
+      }
+  
+      p {
+        font-weight: 400;
+        color: var(--gray-color);
+        margin-top: 2.5px;
+        @media screen and (max-width: 900px) {
+          margin-top: .5px;
+        }
+      }
+    }
+  }
+  
+  .app__courseworks-exp-semester { //class seperation
+    
+    margin-right: 3rem;
+    @media screen and (max-width: 900px) {
+      margin-right: 2rem;
+    }
+  
+    p {
+      font-weight: 1500;
+      box-shadow: .5em 0 0 #FFC107, -.5em 0 0 #FFC107;
+      color: var(--secondary-color);
+    }
+  
+    @media screen and (max-width: 450px) {
+      margin-right: 1rem;
+    }
+  }
+  
+//   .skills-tooltip {
+//     max-width: 300px !important;
+//     background-color: var(--white-color) !important;
+//     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+//     border-radius: 5px !important;
+//     padding: 1rem !important;
+//     color: var(--gray-color) !important;
+//     text-align: center !important;
+//     line-height: 1.5 !important;
+//     opacity: 1 !important;
+  
+//     @media screen and (min-width: 2000px) {
+//       font-size: 1.75rem !important;
+//       max-width: 500px !important;
+//       line-height: 2 !important;
+//     }
+//   }
+
+.app__underImage {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  // justify-content: flex-end;
+  // align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+
+}
+
+.UTCS {
+  width: 30%;
+  object-position: center;
+}

@@ -26,6 +26,7 @@ import aboutHarman from '../assets/aboutHarman.jpg';
 import aboutTrading from '../assets/aboutTrading.jpg';
 import aboutCar from '../assets/aboutCar.jpg';
 
+import utcs from '../assets/uta_cs_logo.png';
 import harman from '../assets/download.png';
 import another from '../assets/Another.jpg';
 import final from '../assets/final.png';
@@ -44,6 +45,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
 export default {
+  utcs,
   aboutCar,
   aboutTrading,
   aboutHarman,

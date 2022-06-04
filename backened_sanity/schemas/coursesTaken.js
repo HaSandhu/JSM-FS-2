@@ -1,16 +1,16 @@
 export default {
-    name:'workExperience',
-    title:'General Experience',
+    name:'coursesTaken',
+    title:'General Courswork',
     type:'document',
     fields:[
            {
                name:'name',
-               title:'Name',
+               title:'Class Name',
                type:'string'
             },
             {
                 name:'company',
-                title:'Entity',
+                title:'Course ID',
                 type:'string'
             },
             {
