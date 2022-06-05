@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {AppWrap} from '../../wrapper';
+import {AppWrap, MotionWrap } from '../../wrapper';
 
+import { images } from '../../constants';
 import './About.scss';
 import { urlFor, client } from '../../client';
 
+var banner = document.createElement("div");
+banner.className = "b";
+banner.innerHTML = "Banner Content";
+
+// document.body.insertBefore(banner,document.body.childNodes[0]);
 
 
 const About = () => {
@@ -19,6 +25,13 @@ const About = () => {
   }, []);
   return (
     <>
+    <div class="a">
+    <img className="app__header-profile" src={images.banner} alt="utbanner"/>
+
+    </div> 
+    {/* banner ^ */}
+    
+
       <h2 className="head-text">time <span className="span-one">pays</span> <br />effort <span>stays</span></h2>
 
       <div className="app__profiles">
@@ -40,4 +53,8 @@ const About = () => {
   );
 }
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg',
+);

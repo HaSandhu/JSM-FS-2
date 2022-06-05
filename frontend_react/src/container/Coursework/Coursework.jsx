@@ -73,5 +73,5 @@ const Coursework = () => {
 export default AppWrap(
   MotionWrap(Coursework, 'app__courseworks'),
   'coursework',
-  'app__whitebg',
+  'app__greybg',
 );
