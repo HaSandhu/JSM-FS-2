@@ -25,10 +25,10 @@ const About = () => {
   }, []);
   return (
     <>
-    <div class="a">
+    {/* <div class="a">
     <img className="app__header-profile" src={images.banner} alt="utbanner"/>
 
-    </div> 
+    </div>  */}
     {/* banner ^ */}
     
 

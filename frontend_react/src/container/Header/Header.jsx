@@ -68,6 +68,7 @@ const Header = () => (
         </div>
       ))}
     </motion.div>
+    <img className="app__header-another" src={images.banner} alt="utbanner"/>
   </div>
 );
 
